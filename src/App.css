@@ -1,0 +1,120 @@
+body {
+  background-color: #dddeea;
+}
+
+.nav {
+  background-color: #dddeea;
+}
+
+/* Hero Carousel */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  /* padding: 60px 0; */
+  /* display: flex; */
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 450px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #dddeea);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #dddeea);
+}
+
+.logos-slide {
+  display: flex;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 70px;
+  margin: 0 10px;
+}
+
+/* Hero Carousel */
+
+/* Hero Video5 Carousel */
+@keyframes rev {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes forward {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel {
+  overflow: hidden;
+
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+}
+
+.carousel:before,
+.carousel:after {
+  position: absolute;
+  top: 0;
+
+  content: "";
+  z-index: 2;
+}
+
+.carousel-slide-forward {
+  display: flex;
+  gap: 20px;
+  animation: 65s forward infinite linear;
+}
+
+.carousel-slide-rev {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  animation: 65s rev infinite linear;
+}
+
+.carousel img {
+  /* max-width: 100%; */
+  width: 25rem;
+  height: 18rem;
+  border-radius: 25px;
+  margin: 0 10px;
+}
+
+/* Hero Video5 Carousel */
+
+/* Hero Video1 */
